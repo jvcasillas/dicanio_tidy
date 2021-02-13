@@ -36,7 +36,7 @@ read_delim(here("ASM_data.txt"), delim = "\t") %>%
          log_f0 = log(f0), 
          f0_std = (f0 - mean(f0, na.rm = T)) / sd(f0, na.rm = T), 
          tonal = str_extract_all(segment, "[[:digit:]]+", simplify = T)) %>% 
-  write_csv("ASM_data_tidy.csv") %>% View
+  write_csv("ASM_data_tidy.csv") 
 
 # Note: It looks like it's all one speaker (as far as I can tell) but I 
 # standardized f0 anyway
